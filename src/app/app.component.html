@@ -1,0 +1,24 @@
+<!-- Component Navbar -->
+<div class="container">
+
+<app-navbar (clickEvent) = "saveImage(banner)"></app-navbar>
+
+  <div class="banner">
+    <div class="banner-text"  #banner [ngStyle]="getBannerStyles()">
+      <span contenteditable="true" [style.fontSize.px] = "fontSize">
+        Type something...
+      </span>
+    </div>
+  </div>
+
+  <app-settings 
+  [colors] = "colors"
+  [percentColor1] = "percentColor1"
+  [percentColor2] = "percentColor2"
+  [width] = "width"
+  [height] = "height"
+  [fontSize] = "fontSize"
+  [color1] = "color1"
+  [color2] = "color2"
+  ></app-settings>
+</div>
